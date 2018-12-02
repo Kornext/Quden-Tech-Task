@@ -47,6 +47,15 @@ public class HashTable {
         }
     }
 
+    public void insert(String values) {
+        String[] symbols = values.split(" ");
+        int[] arrayArguments = new int[symbols.length];
+        for (int i=0; i<symbols.length; i++) {
+            arrayArguments[i] = Integer.parseInt(symbols[i]);
+        }
+        insert(arrayArguments);
+    }
+
     public void output() {
         for (int i = 0; i < buckets.length; i++) {
             System.out.print(i + ": ");
