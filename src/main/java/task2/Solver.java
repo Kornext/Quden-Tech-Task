@@ -1,10 +1,14 @@
 package task2;
 
+import java.io.*;
+
 public class Solver {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //********************TEST************************
-        String text = "aa aa aa aa aa bbb bbb bbb bbb c c c c c c c c c c c c c c c";
-        Diagram diagram = new Diagram(text);
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
+        String input = in.readLine();
+        Diagram diagram = new Diagram(input);
         diagram.sortASC(); //diagram.sortDESC();
         diagram.printDiagram();
     }
